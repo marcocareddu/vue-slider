@@ -1,83 +1,38 @@
-console.log('JS OK')
-
-// *PHASE 1
-// Link to DOM Element
-const prevDown = document.querySelector('.fa-circle-down');
-const nextUp = document.querySelector('.fa-circle-up');
-const imgBox = document.querySelector('.images');
-
-// Link to Thumbnails
-const thumbnails = document.querySelectorAll('.thumbnails img');
-console.log(thumbnails);
-
-// Create array with images
-const sources = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
-
-// Created image active variable
-let activeImage = '';
-let activeThumbnails = '';
-
-
-// *PHASE 2
-// Prepare html injection string
-for (let i = 0; i < sources.length; i++) {
-    activeImage += `<img src="${sources[i]}" alt="">`;
-}
-
-// Add HTML elements in DOM
-imgBox.innerHTML = activeImage;
-
-const images = document.querySelectorAll('.images img');
-
-// Create index variable
-let index = 0;
-
-// console.log(images);
-images[index].classList.add('active');
-
-
-// Button prevDown click
-prevDown.addEventListener('click', function () {
-    images[index].classList.remove('active');
-
-    //Remove  brightness filter
-    thumbnails[index].classList.remove('thumb-active');
-    thumbnails[index].classList.add('inactive');
-    index++;
-
-    // Infinite prevDown click
-    if (index === images.length) {
-        index = 0;
-    }
-
-    // Add brightness filter
-    thumbnails[index].classList.remove('inactive');
-
-    // Add class active in next card
-    images[index].classList.add('active');
-    thumbnails[index].classList.add('thumb-active');
-})
-
-// Button nextUp click
-nextUp.addEventListener('click', function () {
-
-    // Remove active class
-    images[index].classList.remove('active');
-    thumbnails[index].classList.remove('thumb-active');
-    thumbnails[index].classList.add('inactive');
-
-    // Infinite nextUp click
-    if (index === 0) {
-        index = images.length;
-    }
-    index--;
-    thumbnails[index].classList.remove('inactive');
-
-
-    // Add class active in previous card
-    images[index].classList.add('active');
-    thumbnails[index].classList.add('thumb-active');
-
-})
-
 console.log('Vue OK', Vue);
+
+// VUE JS
+const { createApp } = Vue;
+
+const app = createApp({
+    data() {
+        return {
+            currentIndex: 0,
+            images: [
+                {
+                    image: 'img/01.webp',
+                    title: 'Marvel\'s Spiderman Miles Morale',
+                    text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+                }, {
+                    image: 'img/02.webp',
+                    title: 'Ratchet & Clank: Rift Apart',
+                    text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
+                }, {
+                    image: 'img/03.webp',
+                    title: 'Fortnite',
+                    text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
+                }, {
+                    image: 'img/04.webp',
+                    title: 'Stray',
+                    text: 'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
+                }, {
+                    image: 'img/05.webp',
+                    title: "Marvel's Avengers",
+                    text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
+                }
+            ]
+        }
+    }
+});
+
+// Mount
+app.mount('#root');
