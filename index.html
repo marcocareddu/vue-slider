@@ -34,19 +34,19 @@
 
                 <!-- Injected images -->
                 <div class="images">
-                    <img :src="images[currentIndex].image" alt="" class="active">
+                    <img :src="images[currentIndex].image" :alt="images[currentIndex].text" class="active">
                 </div>
 
 
                 <!-- Thumbnails -->
                 <div class="thumbnails">
-                    <i class="fa-solid fa-circle-up fa-2xl"></i>
+                    <i @click="decrementIndex" class="fa-solid fa-circle-up fa-2xl"></i>
                     <img src="./img/01.webp" alt="" class="thumb-active">
                     <img src="./img/02.webp" alt="" class="inactive">
                     <img src="./img/03.webp" alt="" class="inactive">
                     <img src="./img/04.webp" alt="" class="inactive">
                     <img src="./img/05.webp" alt="" class="inactive">
-                    <i class="fa-solid fa-circle-down fa-2xl"></i>
+                    <i @click="incrementIndex" class="fa-solid fa-circle-down fa-2xl"></i>
                 </div>
             </div>
 

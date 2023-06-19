@@ -31,8 +31,22 @@ const app = createApp({
                 }
             ]
         }
+    },
+    computed: {
+        lastElementNumber() {
+            return (this.images.length - 1);
+        }
+    },
+    methods: {
+        incrementIndex() {
+            (this.currentIndex === this.lastElementNumber) ? this.currentIndex = 0 : this.currentIndex++;
+        },
+        decrementIndex() {
+            (this.currentIndex === 0) ? this.currentIndex = this.lastElementNumber : this.currentIndex--;
+        },
     }
 });
 
 // Mount
 app.mount('#root');
+

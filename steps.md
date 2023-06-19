@@ -46,7 +46,7 @@ const images = [
 <br>
 
 ## FASE 2 - Logica Immagini
-- Crare una funzione `currentImage` che ritorna limmagine indice.
+- Crare una funzione `currentImage` che ritorna l'immagine indice.
   - **PER OGMI** immagine in `images`:
     - Prelevare l'immagine indice.
   - *Ritornare* l'immagine indice.
