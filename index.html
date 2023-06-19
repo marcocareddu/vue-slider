@@ -27,13 +27,14 @@
 
 <body>
 
-    <div class="container">
+    <div id="root" class="container">
         <div class="big-box">
             <div class="carousel">
 
 
                 <!-- Injected images -->
                 <div class="images">
+                    <img :src="images[currentIndex].image" alt="" class="active">
                 </div>
 
 
