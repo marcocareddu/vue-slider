@@ -33,14 +33,19 @@ const app = createApp({
         }
     },
     computed: {
+        // Calc last element on array
         lastElementNumber() {
             return (this.images.length - 1);
         }
     },
     methods: {
+
+        // Increment index/ from last to first image
         incrementIndex() {
             (this.currentIndex === this.lastElementNumber) ? this.currentIndex = 0 : this.currentIndex++;
         },
+
+        // Decrement index/ from first to last image
         decrementIndex() {
             (this.currentIndex === 0) ? this.currentIndex = this.lastElementNumber : this.currentIndex--;
         },
