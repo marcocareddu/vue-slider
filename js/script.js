@@ -67,7 +67,7 @@ const app = createApp({
     },
     mounted() {
 
-        // Autoplay every 2s
+        // Autoplay start @ page load, play every 2s
         this.autoplay = setInterval(this.incrementIndex, 2000)
     }
 });
