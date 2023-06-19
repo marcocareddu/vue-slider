@@ -41,7 +41,8 @@
                 <!-- Thumbnails -->
                 <div class="thumbnails">
                     <i @click="decrementIndex" class="fa-solid fa-circle-up fa-2xl"></i>
-                    <img v-for="thumbnail in images" :src="thumbnail.image" alt="" class="thumb-active">
+                    <img v-for="(thumbnail, i) in images" :src="thumbnail.image" alt=""
+                        :class="{inactive : currentIndex !== i}">
                     <i @click="incrementIndex" class="fa-solid fa-circle-down fa-2xl"></i>
                 </div>
             </div>
