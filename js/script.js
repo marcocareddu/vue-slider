@@ -7,6 +7,7 @@ const app = createApp({
     data() {
         return {
             currentIndex: 0,
+            autoplay: null,
             images: [
                 {
                     image: 'img/01.webp',
@@ -53,7 +54,12 @@ const app = createApp({
         // Change index @ click
         indexAtClick(index) {
             this.currentIndex = index;
-        }
+        },
+    },
+    mounted() {
+
+        // Autoplay every 2s
+        setInterval(this.incrementIndex, 2000)
     }
 });
 
