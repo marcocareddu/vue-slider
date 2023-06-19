@@ -36,3 +36,31 @@ const images = [
     }
 ]; -->
 
+
+# VUE Slider
+## FASE 1 - Preliminare
+- Crare il markup.
+- Crare l'array di oggetti.
+- Creare una chiave `currentIndex` che fungerà da indice dell'array su cui far ruotare le immagini.
+
+<br>
+
+## FASE 2 - Logica Immagini
+- Crare una funzione `currentImage` che ritorna limmagine indice.
+  - **PER OGMI** immagine in `images`:
+    - Prelevare l'immagine indice.
+  - *Ritornare* l'immagine indice.
+## FASE 2b - Logica Thumbnails
+- Come per FASE 2 cambia solo la classe active.
+
+<br>
+
+## FASE 3 - Svolgimento
+- Crare una funzione `incrementIndex` che aumenta `currentIndex` di 1.
+- Crare una funzione `decrementIndex` che diminuisce `currentIndex` di 1.
+- Associare al bottone next `incrementIndex`.
+- Associare al bottone prev `decrementIndex`.
+
+
+
+
