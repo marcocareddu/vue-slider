@@ -41,11 +41,7 @@
                 <!-- Thumbnails -->
                 <div class="thumbnails">
                     <i @click="decrementIndex" class="fa-solid fa-circle-up fa-2xl"></i>
-                    <img src="./img/01.webp" alt="" class="thumb-active">
-                    <img src="./img/02.webp" alt="" class="inactive">
-                    <img src="./img/03.webp" alt="" class="inactive">
-                    <img src="./img/04.webp" alt="" class="inactive">
-                    <img src="./img/05.webp" alt="" class="inactive">
+                    <img v-for="thumbnail in images" :src="thumbnail.image" alt="" class="thumb-active">
                     <i @click="incrementIndex" class="fa-solid fa-circle-down fa-2xl"></i>
                 </div>
             </div>
