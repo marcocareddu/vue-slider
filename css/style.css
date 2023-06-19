@@ -58,10 +58,6 @@ i {
     left: 50%;
 }
 
-.thumb-active {
-    filter: brightness(1);
-}
-
 .inactive {
     filter: brightness(0.5);
 }
