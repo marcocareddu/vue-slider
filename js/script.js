@@ -49,6 +49,11 @@ const app = createApp({
         decrementIndex() {
             (this.currentIndex === 0) ? this.currentIndex = this.lastElementNumber : this.currentIndex--;
         },
+
+        // Change index @ click
+        indexAtClick(index) {
+            this.currentIndex = index;
+        }
     }
 });
 
