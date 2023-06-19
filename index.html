@@ -34,7 +34,8 @@
 
                 <!-- Injected images -->
                 <div class="images">
-                    <img :src="images[currentIndex].image" :alt="images[currentIndex].text" class="active">
+                    <img :src="images[currentIndex].image" :alt="images[currentIndex].text" class="active"
+                        @mouseenter="stopAutoPlay" @mouseleave="autoPlay">
                 </div>
 
 
@@ -42,7 +43,7 @@
                 <div class="thumbnails">
                     <i @click="decrementIndex" class="fa-solid fa-circle-up fa-2xl"></i>
                     <img v-for="(thumbnail, i) in images" :src="thumbnail.image" @click="indexAtClick(i)" alt=""
-                        :class=" {inactive : currentIndex !==i}">
+                        :class=" {inactive : currentIndex !==i}" @mouseenter="stopAutoPlay" @mouseleave="autoPlay">
                     <i @click="incrementIndex" class="fa-solid fa-circle-down fa-2xl"></i>
                 </div>
             </div>

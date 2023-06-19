@@ -55,11 +55,20 @@ const app = createApp({
         indexAtClick(index) {
             this.currentIndex = index;
         },
+
+        autoPlay() {
+            this.autoplay = setInterval(this.incrementIndex, 2000)
+        },
+
+        // Stop autoplay
+        stopAutoPlay() {
+            clearInterval(this.autoplay);
+        }
     },
     mounted() {
 
         // Autoplay every 2s
-        setInterval(this.incrementIndex, 2000)
+        this.autoplay = setInterval(this.incrementIndex, 2000)
     }
 });
 

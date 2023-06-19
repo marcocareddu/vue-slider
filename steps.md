@@ -9,7 +9,7 @@ Bonus:
 3 - quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
 Consigli del giorno:
 regola d'oro: riciclare ovunque possibile! Se stiamo ripetendo della logica possiamo aiutarci sicuramente centralizzando il codice!
-il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'esercizio si riduce a poche righe ;)
+il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'esercizio si riduce a poche righe ;
 Buon lavoro e buon divertimento!
 Di seguito l'array di oggetti da utilizzare come dati:
 const images = [
